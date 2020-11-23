@@ -17,10 +17,11 @@ Features
 
 ## Instructions
 
-when you are promted to enter a location, please do so in the following formats:
-City 
-City, Country
-City, State, Country (Only for US states)
+when you are promted to enter a location, please do so in the following formats
+
+- City 
+- City, Country
+- City, State, Country (Only for US states)
 
 When you type in a place, please type in the full word for each section. NYC, NY will not be valid. New York City, New York will be.
 
