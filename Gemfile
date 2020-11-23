@@ -1,8 +1,8 @@
 Weatherbot
-A Ruby CLI wrapper using the OpenWeatherMap.org API with interactive features that allow you to search any location's current weather, quick link to the map in Google Maps, and also display the 3 day forecast.
+A Ruby CLI wrapper using the OpenWeatherMap.org API with interactive features that allow you to search any locations current weather, quick link to the map in Google Maps, and also display the 3 day forecast.
 
 Installation
-Add this line to your application's Gemfile:
+Add this line to your applications Gemfile:
 
 gem 'weatherbot'
 And then execute:
@@ -31,7 +31,7 @@ Cloudiness
 Humidity
 Wind Speed & Direction
 Sunrise and Sunset
-You can type forecast to display the city's 3 day weather forecast in 24 hour intervals.
+You can type forecast to display the citys 3 day weather forecast in 24 hour intervals.
 
 After typing in a location, you can type map to open your OS browser to the Google Maps coordinates of the result.
 
@@ -43,10 +43,10 @@ After checking out the repo, run bin/setup to install dependencies. Then, run ra
 To install this gem onto your local machine, run bundle exec rake install. To release a new version, update the version number in version.rb, and then run bundle exec rake release, which will create a git tag for the version, push git commits and tags, and push the .gem file to rubygems.org.
 
 Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/TheInvalidNonce/weatherbot. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Yahsei/weatherbot. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 License
 The gem is available as open source under the terms of the MIT License.
 
 Code of Conduct
-Everyone interacting in the Weatherbot project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
+Everyone interacting in the Weatherbot project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct."
