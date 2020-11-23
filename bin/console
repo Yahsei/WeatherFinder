@@ -1,3 +1,4 @@
+  
 #!/usr/bin/env ruby
 
 require "bundler/setup"
@@ -11,4 +12,5 @@ require "weatherbot"
 # Pry.start
 
 require "irb"
+
 IRB.start(__FILE__)

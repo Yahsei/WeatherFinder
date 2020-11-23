@@ -1,6 +1,9 @@
-require "weatherbot/version"
+require 'httparty'
+# require 'pry'
+require 'bundler/setup'
+# Bundler.require
 
-module Weatherbot
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./version"
+require_relative "./cli"
+require_relative "./helper"
+require_relative "./api"
