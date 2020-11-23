@@ -1,4 +1,4 @@
-# CLI Controller
+# CLI Interface
 require 'paint'
 
 class Weatherbot::CLI
