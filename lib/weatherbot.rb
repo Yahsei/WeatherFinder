@@ -1,4 +1,4 @@
-# require 'httparty'
+
 # require 'pry'
 require 'bundler/setup'
 # Bundler.require
