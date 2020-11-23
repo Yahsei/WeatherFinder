@@ -13,7 +13,7 @@ class Weatherbot::API < Helper
       @@locations
     end
   
-    # Takes user input to enter into URL query & gets current weather conditions in imperial units
+    # finds the querty and locates answers in Imperial. Helper will convert to celsius
     def self.current_weather(location)
       response = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial")
       parsed = response.parsed_response
@@ -32,7 +32,7 @@ class Weatherbot::API < Helper
       @current.temp_avg = parsed["main"]["temp"]
       @current.condition = parsed["weather"].first["description"]
       @current.cloudiness = parsed["clouds"]["all"]
-      # @current.pressure = parsed["main"]["pressure"]
+      # @current.pressure = parsed["main"]["pressure"] DOES NOT WORK T_T
       @current.humidity = parsed["main"]["humidity"]
       @current.wind_speed = parsed["wind"]["speed"]
       @current.sunrise = Time.at(parsed["sys"]["sunrise"])
@@ -40,11 +40,11 @@ class Weatherbot::API < Helper
       @current.wind_direction = degToCompass(parsed["wind"]["deg"])
       @current.temp_celsius = toCelsius(parsed["main"]["temp"])
   
-      # Open query in browser to Google Maps
+      # Open query in browser to Google Maps DOES NOT WORK MUST OPEN MANUALLY. 
       @current.google_maps = "https://www.google.com/maps/place/#{@current.coordinates.gsub(" ", "")}"
       @google_maps_link = @current.google_maps
   
-      # Check for odd locations with no country key
+      # Check for odd locations with no country key. Did not help a ton. Thanks though Josh.
       if parsed.fetch("sys").has_key?("country")
         @current.country = parsed["sys"]["country"]
       else
@@ -58,7 +58,7 @@ class Weatherbot::API < Helper
     end
   
   
-    # Takes user input to enter into URL query for 3 day forecast in imperial units
+    # Takes user input to enter into URL query for 3 day forecast in imperial units Did not work. I think there's a bug somewhere.
     def self.forecast(location)
       # query sample: https://api.openweathermap.org/data/2.5/forecast?q=new+york&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial
       response = HTTParty.get("https://api.openweathermap.org/data/2.5/forecast?q=#{location}&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial")
@@ -94,11 +94,11 @@ class Weatherbot::API < Helper
       forecast.wind_direction48 = degToCompass(parsed["list"][16]["wind"]["deg"])
       forecast.wind_direction72 = degToCompass(parsed["list"][24]["wind"]["deg"])
   
-      # Open query in browser to Google Maps
+      # Open query in browser to Google Maps. Doesn't work.
       forecast.google_maps = "https://www.google.com/maps/place/#{@current.coordinates.gsub(" ", "")}"
       @google_maps_link = @current.google_maps
   
-      # Output 3 day forecast
+      # Output 3 day forecast. Currently not working
       puts "\n-------------------------------\n"
       puts "\n\nIn 24 Hours:"
       puts "\nReport Time:      #{forecast.hr24_dt}"
