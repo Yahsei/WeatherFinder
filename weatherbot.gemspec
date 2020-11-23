@@ -7,22 +7,13 @@ require "version"
 Gem::Specification.new do |spec|
   spec.name          = "weatherbot"
   spec.version       = Weatherbot::VERSION
-  spec.authors       = ["Janusz Szubert"]
-  spec.email         = ["TheInvalidNonce@gmail.com"]
+  spec.authors       = ["Yahsei"]
+  spec.email         = ["Jessesl22@gmail.com"]
 
   spec.summary       = %q{A Ruby CLI wrapper using the OpenWeatherMap.org API}
   spec.description   = %q{A Ruby CLI wrapper using the OpenWeatherMap.org API with interactive features that allow you to search any location's current weather and 3 day forecast.}
-  spec.homepage      = "https://github.com/TheInvalidNonce/weatherbot-cli-app"
+  spec.homepage      = "https://github.com/Yahsei/Weatherbot"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  # if spec.respond_to?(:metadata)
-  #   spec.metadata["allowed_push_host"] = ": Set to 'http://mygemserver.com'"
-  # else
-  #   raise "RubyGems 2.0 or newer is required to protect against " \
-  #     "public gem pushes."
-  # end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -31,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.executables   = ['weatherbot']
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
+  spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
   spec.add_runtime_dependency "paint", "~> 2.0"

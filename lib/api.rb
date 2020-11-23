@@ -15,7 +15,6 @@ class Weatherbot::API < Helper
   
     # Takes user input to enter into URL query & gets current weather conditions in imperial units
     def self.current_weather(location)
-      # query sample: 'https://api.openweathermap.org/data/2.5/weather?q=new+york&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial'
       response = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial")
       parsed = response.parsed_response
       @current = self.new
