@@ -13,7 +13,7 @@ class Weatherfinder::CLI
   end
 
   def intro
-    puts "\n\nI'm a bot that gives you current and forecast weather for up to 200,000 cities in the world with the help of the OpenWeatherAPI database!\n\n"
+    puts "\n\nI'm a bot that gives you current weather details for up to 200,000 cities in the world with the help of the OpenWeatherAPI database in real time!\n\n"
   end
 
   def menu

@@ -1,28 +1,27 @@
 # Weatherfinder
 
+Weatherfinder is a gem that uses OpenWeatherAPI to find the weather in over 200,000 cities around the world. It gives you weather details about any location you enter.
 
+Details:
 
-TODO: Delete this and the text above, and describe your gem
+- Location 
+- Coordinates 
+- Google Map URL 
+- Temperature
+- Sky Condition
+- Humidity
+- Wind Speed
+- Wind Direction
+- Sunrise and Sunset
 
-## Installation
+## Instructions
 
-Add this line to your application's Gemfile:
+when you are promted to enter a location, please do so in the following formats:
+City 
+City, Country
+City, State, Country (Only for US states)
 
-```ruby
-gem 'weatherfinder'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install weatherfinder
-
-## Usage
-
-TODO: Write usage instructions here
+When you type in a place, please type in the full word for each section. NYC, NY will not be valid. New York City, New York will be.
 
 ## Development
 

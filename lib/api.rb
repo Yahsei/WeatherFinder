@@ -13,7 +13,7 @@ class Weatherfinder::API < Helper
       @@locations
     end
   
-    # finds the querty and locates answers in Imperial. Helper will convert to celsius
+    # finds the querty and locates answers in Imperial from API. Helper will convert to celsius
     def self.current_weather(location)
       response = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=3207703ee5d0d14e6b6a53d10071018f&units=imperial")
       parsed = response.parsed_response
@@ -44,7 +44,7 @@ class Weatherfinder::API < Helper
       @current.google_maps = "https://www.google.com/maps/place/#{@current.coordinates.gsub(" ", "")}"
       @google_maps_link = @current.google_maps
   
-      # Check for odd locations with no country key. Did not help a ton. Thanks though Josh.
+      # Check for odd locations with no country key. 
       if parsed.fetch("sys").has_key?("country")
         @current.country = parsed["sys"]["country"]
       else
