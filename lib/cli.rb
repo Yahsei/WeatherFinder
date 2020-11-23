@@ -1,11 +1,11 @@
 # CLI Interface
 require 'paint'
 
-class Weatherbot::CLI
+class Weatherfinder::CLI
 
 
   def call
-    puts "Hello, I am Weatherbot! Nice to meet you!"
+    puts "Hello, I am Weatherfinder! Nice to meet you!"
     sleep(1)
 
     intro
@@ -47,7 +47,7 @@ class Weatherbot::CLI
       if input.empty?
         menu
       else
-        weather = Weatherbot::API.current_weather(input)
+        weather = Weatherfinder::API.current_weather(input)
         display_weather(weather)
       end
 
@@ -60,12 +60,12 @@ class Weatherbot::CLI
       end
       # Display forecast or location map
       if new_input === "forecast"
-        Weatherbot::API.forecast(input)
+        Weatherfinder::API.forecast(input)
         menu
       elsif new_input === "list"
         display_previous
       elsif new_input === "map"
-        Weatherbot::API.open_link
+        Weatherfinder::API.open_link
         menu
       else
         input = nil
@@ -92,7 +92,7 @@ class Weatherbot::CLI
   end
 
   def display_previous
-    Weatherbot::API.locations.map { |entry| puts Paint[entry.location_name, "#683A5E"] }
+    Weatherfinder::API.locations.map { |entry| puts Paint[entry.location_name, "#683A5E"] }
   end
 
 

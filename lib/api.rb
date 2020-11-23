@@ -1,5 +1,5 @@
 
-class Weatherbot::API < Helper
+class Weatherfinder::API < Helper
     attr_accessor :location, :response_code, :coordinates, :country, :location_name, :temp_avg, :temp_celsius, :condition, :cloudiness, :humidity, :wind_speed, :wind_direction, :report_time, :google_maps, :google_maps_link, :sunrise, :sunset, :hr24_dt, :hr48_dt, :hr72_dt, :temp24, :temp48, :temp72, :condition24, :condition48, :condition72, :cloudiness24, :cloudiness48, :cloudiness72, :humidity24, :humidity48, :humidity72, :wind_speed24, :wind_speed48, :wind_speed72, :wind_direction24, :wind_direction48, :wind_direction72
   
     @@locations = []
