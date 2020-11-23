@@ -6,20 +6,8 @@ class Weatherbot::CLI
 
   def call
     puts "
-           __   __  ___           ___   __   __   __
-          |  | |  ||   |         |   | |  | |  |_|  |
-          |  |_|  ||   |         |   | |__| |       |
-          |       ||   |         |   |      |       |
-          |       ||   |  ___    |   |      |       |
-          |   _   ||   | |_  |   |   |      | ||_|| |
-          |__| |__||___|   |_|   |___|      |_|   |_|
-           _     _  _______  _______  _______  __   __  _______  ______    _______  _______  _______  __
-          | | _ | ||       ||   _   ||       ||  | |  ||       ||    _ |  |  _    ||       ||       ||  |
-          | || || ||    ___||  |_|  ||_     _||  |_|  ||    ___||   | ||  | |_|   ||   _   ||_     _||  |
-          |       ||   |___ |       |  |   |  |       ||   |___ |   |_||_ |       ||  | |  |  |   |  |  |
-          |       ||    ___||       |  |   |  |       ||    ___||    __  ||  _   | |  |_|  |  |   |  |__|
-          |   _   ||   |___ |   _   |  |   |  |   _   ||   |___ |   |  | || |_|   ||       |  |   |   __
-          |__| |__||_______||__| |__|  |___|  |__| |__||_______||___|  |_||_______||_______|  |___|  |__|
+           Hi, I'm your friendly weatherbot here to show you all the important weather info that you need to know in these uncertain times!
+          
           "
     sleep(1)
 
@@ -28,7 +16,7 @@ class Weatherbot::CLI
   end
 
   def intro
-    puts "\n\nI'm a command line interface Ruby gem that gives you current and forecast weather for any location in the world!\n\n"
+    puts "\n\nI'm a command line interface Ruby gem that show you the current weather forecast for up to 200,000 cities from OpenWeatherAPI!\n\n"
   end
 
   def menu
