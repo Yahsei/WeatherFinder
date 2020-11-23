@@ -78,7 +78,7 @@ class Weatherbot::CLI
   end
 
   def display_weather(weather)
-    puts "\n\nReport Time:      #{weather.report_time}"
+  
     puts "Location:         #{weather.location_name}, #{weather.country}"
     puts "Coordinates:      #{weather.coordinates}"
     puts "Google Maps:      #{weather.google_maps}"
