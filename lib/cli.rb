@@ -25,11 +25,12 @@ class Weatherbot::CLI
     while input != "exit"
 
       puts "\n-------------------------------\n"
-      puts "\nPlease enter a specific location in the format:" <location>, <country> + " to check the current weather conditions for that location. You can also search by " + Paint['<location>, <state/region>, <country>', "#D26C22"] + " to find the correct specific location.
-      \n
-      puts "\n \nType "'list',  + " to see a list of previous locations. To quit, type " + Paint['exit', "#1E90FF"] + "."
+      puts "\nPlease enter a specific location in the format:" + Paint[' <location>, <country>', "#D26C22"] + " to check the current weather conditions for that location. You can also search by " + Paint['<location>, <state/region>, <country>', "#D26C22"] + " to find the correct specific location.
+      \nType " + Paint['map', "#1E90FF"] + " to open the most relevant result in your OS default browser.
+      \n" + Paint['NOTE: ', :red] + "This will open your web browser to the most likely location coordinates in " + Paint['Google Maps.', :italic, :underline]
+      puts "\nYou can also type " + Paint['forecast', "#1E90FF"] + " to display the 3 day forecast of the most recent search.
+      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. To quit, type " + Paint['exit', "#1E90FF"] + "."
       puts "\n-------------------------------\n"
-
 
       input = gets.chomp.downcase
 
@@ -78,7 +79,7 @@ class Weatherbot::CLI
   end
 
   def display_weather(weather)
-  
+    puts "\n\nReport Time:      #{weather.report_time}"
     puts "Location:         #{weather.location_name}, #{weather.country}"
     puts "Coordinates:      #{weather.coordinates}"
     puts "Google Maps:      #{weather.google_maps}"
