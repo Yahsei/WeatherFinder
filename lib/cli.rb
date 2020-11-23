@@ -26,7 +26,7 @@ class Weatherbot::CLI
       \nOpen the " + Paint['Google Maps URL', "#1E90FF"] + " to open the most relevant result in your browser.
       \n" + Paint['NOTE: ', :red] + "This will open your web browser to the most likely location coordinates in " + Paint['Google Maps.', :italic, :underline]
       puts "
-      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. To quit, type " + Paint['exit', "#1E90FF"] + "."
+      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. \n\n To quit, type " + Paint['exit', "#1E90FF"] + "."
       puts "\n-------------------------------\n"
 
 
