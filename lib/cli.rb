@@ -25,9 +25,8 @@ class Weatherfinder::CLI
       puts "\nPlease enter a specific location in the format:" + Paint[' <location>, <country>', "#D26C22"] + " to check the current weather conditions for that location. You can also search by " + Paint['<location>, <state/region>, <country>', "#D26C22"] + " to find the correct specific location. Do not use any shortened or stang versions of locations.
       \nOpen the " + Paint['Google Maps URL', "#1E90FF"] + " in your browser.
       \n" + Paint['NOTE: ', :red] + "This will lead to the most likely location coordinates in " + Paint['Google Maps.', :italic, :underline]
-      puts "
       puts "\nYou can also type " + Paint['forecast', "#1E90FF"] + " to display the 3 day forecast of the most recent search.
-      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. To quit, type " + Paint['exit', "#1E90FF"] + "." \n\nTo quit, type " + Paint['exit', "#1E90FF"] + "."
+      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. \n\nTo quit, type " + Paint['exit', "#1E90FF"] + "
       puts "\n-------------------------------\n"
 
 
