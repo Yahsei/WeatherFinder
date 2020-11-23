@@ -26,7 +26,8 @@ class Weatherfinder::CLI
       \nOpen the " + Paint['Google Maps URL', "#1E90FF"] + " in your browser.
       \n" + Paint['NOTE: ', :red] + "This will lead to the most likely location coordinates in " + Paint['Google Maps.', :italic, :underline]
       puts "\nYou can also type " + Paint['forecast', "#1E90FF"] + " to display the 3 day forecast of the most recent search.
-      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. \n\nTo quit, type " + Paint['exit', "#1E90FF"] + "
+      \nType " + Paint['list', "#1E90FF"] + " to see a list of previous locations. \n\nTo quit, type " + Paint['exit', "#1E90FF"]
+      
       puts "\n-------------------------------\n"
 
 
