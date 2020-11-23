@@ -17,6 +17,8 @@ Features
 
 ## Instructions
 
+Open Weatherfinder through the command 'bin/weatherfinder'
+
 when you are promted to enter a location, please do so in the following formats
 
 - City 
